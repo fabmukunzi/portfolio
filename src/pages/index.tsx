@@ -1,51 +1,29 @@
+import Aboutcomponent from '@/components/about';
+import HeaderComponent from '@/components/header';
+import { Image } from '@nextui-org/react';
 import React from 'react';
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  Link,
-  Button,
-} from '@nextui-org/react';
-import { Sun } from 'lucide-react';
-// import {AcmeLogo} from "./AcmeLogo.jsx";
 
 export default function App() {
   return (
-    <Navbar>
-      <NavbarBrand>
-        {/* <AcmeLogo /> */}
-        <p className="font-bold text-inherit">FABMUKUNZI</p>
-      </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#experience">
-            Experience
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#projects" aria-current="page">
-            Projects
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#feedback">
-            Feedback
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            GET IN TOUCH
-          </Button>
-        </NavbarItem>
-        <NavbarItem className="hidden lg:flex">
-          <Button isIconOnly>
-            <Sun className="" />
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-    </Navbar>
+    <div className="mb-2">
+      <HeaderComponent />
+      <div className="flex justify-around items-center text-lg">
+        <p>
+          Hello there👋, I am
+          <br />
+          <span className="text-5xl font-bold">Fabrice Mukunzi</span>
+          <br />
+          Experienced Fullstack developer based in Kigali,Rwanda
+          <br />I thrive on turning ideas into impactful solutions.
+          <br /> With a keen eye for detail and a dedication to excellence
+        </p>
+        <Image
+          width={300}
+          alt="logo"
+          src="https://res.cloudinary.com/dagurahkl/image/upload/v1698509499/xpu6s3rcfvdnvjrvnr61.png "
+        />
+      </div>
+      <Aboutcomponent />
+    </div>
   );
 }
