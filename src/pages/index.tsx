@@ -1,5 +1,8 @@
 import Aboutcomponent from '@/components/about';
+import ContactComponent from '@/components/contact';
+import ExperienceComponent from '@/components/experience';
 import HeaderComponent from '@/components/header';
+import ProjectsComponent from '@/components/projects';
 import { Image } from '@nextui-org/react';
 import React from 'react';
 
@@ -7,7 +10,7 @@ export default function App() {
   return (
     <div className="mb-2">
       <HeaderComponent />
-      <div className="flex justify-around items-center text-lg">
+      <div className="flex md:flex-row flex-col-reverse justify-around items-center text-lg">
         <p>
           Hello there👋, I am
           <br />
@@ -24,6 +27,9 @@ export default function App() {
         />
       </div>
       <Aboutcomponent />
+      <ExperienceComponent />
+      <ProjectsComponent />
+      <ContactComponent />
     </div>
   );
 }

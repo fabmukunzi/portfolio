@@ -2,13 +2,13 @@ import { AntdImage, GrapgqlImage, JavascriptImage, NextImage, ReactImage, Tailwi
 import { Image } from '@nextui-org/react';
 import React from 'react';
 
-const Aboutcomponent = () => {
+const ProjectsComponent = () => {
   return (
     <div
       className="bg-[#111111] py-10 flex flex-col items-center"
-      id="about"
+      id="projects"
     >
-      <h1 className="text-left text-4xl font-bold">About</h1>
+      <h1 className="text-left text-4xl font-bold">Projects</h1>
       <p className="md:w-1/2 mx-4 text-center">
         With a passion for [your field], I&apos;ve honed my skills over 3 years,
         blending creativity with strategic thinking. Specializing in Software
@@ -30,4 +30,4 @@ const Aboutcomponent = () => {
   );
 };
 
-export default Aboutcomponent;
+export default ProjectsComponent;

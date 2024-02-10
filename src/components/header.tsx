@@ -13,7 +13,7 @@ export default function HeaderComponent() {
   return (
     <Navbar>
       <NavbarBrand>
-        <Link className="font-bold text-inherit" color="foreground" href="#">
+        <Link className="font-bold text-inherit" color="foreground" href="/">
           FABMUKUNZI
         </Link>
       </NavbarBrand>
