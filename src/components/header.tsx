@@ -8,8 +8,10 @@ import {
   Button,
 } from '@nextui-org/react';
 import { Sun } from 'lucide-react';
+import { useTheme } from 'next-themes';
 
 export default function HeaderComponent() {
+  const { theme, setTheme } = useTheme();
   return (
     <Navbar>
       <NavbarBrand>
@@ -57,7 +59,13 @@ export default function HeaderComponent() {
           </Button>
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
-          <Button isIconOnly>
+          <Button
+            isIconOnly
+            onClick={() => {
+              if (theme === 'light') setTheme('purple-dark');
+              else setTheme('light');
+            }}
+          >
             <Sun className="" />
           </Button>
         </NavbarItem>

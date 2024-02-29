@@ -1,11 +1,19 @@
-import { AntdImage, GrapgqlImage, JavascriptImage, NextImage, ReactImage, TailwindImage, TypescriptImage } from '@/utils/images';
-import { Image } from '@nextui-org/react';
+import {
+  AntdImage,
+  GrapgqlImage,
+  JavascriptImage,
+  NextImage,
+  ReactImage,
+  TailwindImage,
+  TypescriptImage,
+} from '@/utils/images';
+import Image from 'next/image';
 import React from 'react';
 
 const Aboutcomponent = () => {
   return (
     <div
-      className="bg-[#111111] py-10 flex flex-col items-center"
+      className="bg-[#111111] mt-32 py-10 flex flex-col items-center"
       id="about"
     >
       <h1 className="text-left text-4xl font-bold">About</h1>
@@ -17,14 +25,14 @@ const Aboutcomponent = () => {
         expanded my expertise through various online platforms, shaping me into
         a dedicated and skilled web professional.
       </p>
-      <div className="grid grid-cols-3">
-      <Image src={ReactImage} alt="React" />
-      <Image src={NextImage} alt="Next.js" />
-      <Image src={GrapgqlImage} alt="GraphQL" />
-      <Image src={TypescriptImage} alt="TypeScript" />
-      <Image src={JavascriptImage} alt="JavaScript" />
-      <Image src={AntdImage} alt="Ant Design" />
-      <Image src={TailwindImage} alt="Tailwind CSS" />
+      <div className="grid grid-cols-4 gap-x-10 gap-y-2 items-center place-items-center my-4">
+        <Image width={120} src={ReactImage} alt="React" />
+        <Image width={120} src={NextImage} alt="Next.js" />
+        <Image width={120} src={GrapgqlImage} alt="GraphQL" />
+        <Image width={120} src={TypescriptImage} alt="TypeScript" />
+        <Image width={120} src={JavascriptImage} alt="JavaScript" />
+        <Image width={120} src={AntdImage} alt="Ant Design" />
+        <Image width={120} src={TailwindImage} alt="Tailwind CSS" />
       </div>
     </div>
   );
