@@ -10,13 +10,11 @@ export default function App() {
   return (
     <div className="dark:bg-black dark:text-white bg-white text-black">
       <HeaderComponent />
-      <div className="mx-6 md:mx-0">
-        <LandingPage />
-        <Aboutcomponent />
-        <ExperienceComponent />
-        <ProjectsComponent />
-        <ContactComponent />
-      </div>
+      <LandingPage />
+      <Aboutcomponent />
+      <ExperienceComponent />
+      <ProjectsComponent />
+      <ContactComponent />
     </div>
   );
 }

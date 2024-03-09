@@ -38,7 +38,7 @@ const LandingPage = () => {
     // },
   ];
   return (
-    <div className="flex -mt-4 h-[100vh] md:flex-row flex-col-reverse justify-around items-center text-lg">
+    <div className="flex md:mx-0 mx-6 -mt-4 h-[100vh] md:flex-row flex-col-reverse justify-around items-center text-lg">
       <div className="text-xl">
         <p className="text-2xl font-semibold">I am Fabrice Mukunzi</p>
         <p className="md:text-4xl text-3xl font-bold my-1">
@@ -70,9 +70,10 @@ const LandingPage = () => {
         className="border p-6 rounded-xl md:rotate-12"
         initial={{ rotate: 20 }}
         whileHover={{ rotate: 0 }}
+        whileTap={{ rotate: 0 }}
         transition={{ duration: 0.3 }}
         src="https://res.cloudinary.com/dagurahkl/image/upload/v1698509499/xpu6s3rcfvdnvjrvnr61.png "
-        width={290}
+        width={220}
       />
     </div>
   );

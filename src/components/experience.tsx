@@ -22,7 +22,7 @@ const ExperienceComponent = () => {
         Below is few of my recent relevant technical experience.
       </p>
       {experience.map((exp) => (
-        <div className="text-left md:w-[70%]" key={exp.url}>
+        <div className="text-left md:mx-0 mx-6 md:w-[70%]" key={exp.url}>
           <Link
             target="blank"
             href={exp.url}
