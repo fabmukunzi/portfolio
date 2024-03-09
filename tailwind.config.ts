@@ -13,7 +13,12 @@ const config: Config = {
     dark: {},
   },
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        secondary: '#a1a1a1',
+        secondary_dark: '#282828',
+      },
+    },
   },
   darkMode: 'class',
   plugins: [],

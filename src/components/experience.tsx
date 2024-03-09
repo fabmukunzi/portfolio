@@ -1,3 +1,4 @@
+import { experience } from '@/utils/constants';
 import {
   AntdImage,
   GrapgqlImage,
@@ -7,26 +8,37 @@ import {
   TailwindImage,
   TypescriptImage,
 } from '@/utils/images';
+import { ExternalLink } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 // import { Image } from '@nextui-org/react';
 import React from 'react';
 
 const ExperienceComponent = () => {
   return (
-    <div className="py-10 flex flex-col items-center" id="experience">
-      <h1 className="text-left text-4xl font-bold">Experince</h1>
-      <p className="md:w-1/2 my-10 text-center">
-        Below is some of the recent projects i have worked on.
+    <div className="flex flex-col items-center" id="experience">
+      <h1 className="py-20 text-left text-4xl font-bold">Experince</h1>
+      <p className="md:w-1/2 mb-5 text-center">
+        Below is few of my recent relevant technical experience.
       </p>
-      <div className="grid grid-cols-3">
-        <Image src={ReactImage} alt="React" />
-        <Image src={NextImage} alt="Next.js" />
-        <Image src={GrapgqlImage} alt="GraphQL" />
-        <Image src={TypescriptImage} alt="TypeScript" />
-        <Image src={JavascriptImage} alt="JavaScript" />
-        <Image src={AntdImage} alt="Ant Design" />
-        <Image src={TailwindImage} alt="Tailwind CSS" />
-      </div>
+      {experience.map((exp) => (
+        <div className="text-left md:w-[70%]" key={exp.url}>
+          <Link
+            target="blank"
+            href={exp.url}
+            className="flex gap-4 font-bold md:text-xl"
+          >
+            {exp.company} <ExternalLink />
+          </Link>
+          <p className="text-secondary text-base my-2">@{exp.position}</p>
+          <p className="text-secondary text-xs">{exp.duration}</p>
+          <div className="flex flex-col my-4 text-secondary">
+            {exp.responsibilities.map((resp) => (
+              <p key={resp}>- {resp}</p>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
