@@ -27,7 +27,7 @@ const ContactComponent = () => {
       >
         Send an email
       </Button>
-      <p className="text-secondary my-6">
+      <p className="text-secondary mt-32 relative ">
         &copy; {new Date().getFullYear()} All Right Reserved
       </p>
     </div>
