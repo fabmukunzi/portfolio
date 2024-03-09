@@ -12,10 +12,7 @@ import React from 'react';
 
 const Aboutcomponent = () => {
   return (
-    <div
-      className="bg-[#111111] mt-32 py-10 flex flex-col items-center"
-      id="about"
-    >
+    <div className="mt-64 py-10 flex flex-col items-center" id="about">
       <h1 className="text-left text-4xl font-bold">About</h1>
       <p className="md:w-1/2 mx-4 text-center">
         With a passion for [your field], I&apos;ve honed my skills over 3 years,

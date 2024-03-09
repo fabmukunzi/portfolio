@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Navbar,
   NavbarBrand,
@@ -6,70 +6,100 @@ import {
   NavbarItem,
   Link,
   Button,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
 } from '@nextui-org/react';
-import { Sun } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
 export default function HeaderComponent() {
   const { theme, setTheme } = useTheme();
+  const [isActive, setIsActive] = useState('#about');
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const navItems = [
+    {
+      label: 'About',
+      href: '#about',
+    },
+    {
+      label: 'Experience',
+      href: '#experience',
+    },
+    {
+      label: 'Projects',
+      href: '#projects',
+    },
+    {
+      label: 'Get in touch',
+      href: '#contact',
+    },
+  ];
+
   return (
-    <Navbar>
+    <Navbar isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarBrand>
-        <Link className="font-bold text-inherit" color="foreground" href="/">
+        <Link className="font-bold text-inherit" color="foreground" href="#">
           FABMUKUNZI
         </Link>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-10" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#about">
-            About
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#experience">
-            Experience
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#projects">
-            Projects
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#contact">
-            Get in touch
-          </Link>
-        </NavbarItem>
-        {/* <NavbarItem>
-          <Link color="foreground" href="#feedback">
-            Feedback
-          </Link>
-        </NavbarItem> */}
+        {navItems.map((item) => (
+          <NavbarItem key={item.href} isActive={isActive === item.href}>
+            <Link
+              onClick={() => setIsActive(item.href)}
+              color="foreground"
+              href={item.href}
+            >
+              {item.label}
+            </Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
           <Button
+            rel="noopener noreferrer"
             as={Link}
-            size="lg"
-            className="font-semibold"
-            href="#"
-            variant="flat"
+            className="font-semibold rounded-lg dark:bg-white dark:text-black md:mx-6 bg-black px-4 h-11 text-white"
+            href="../assets/resume.pdf"
+            variant="solid"
           >
             Resume
           </Button>
         </NavbarItem>
-        <NavbarItem className="hidden lg:flex">
+        <NavbarItem>
           <Button
+            className="font-semibold rounded-full dark:bg-white dark:text-black bg-black p-2 text-white"
             isIconOnly
             onClick={() => {
-              if (theme === 'light') setTheme('purple-dark');
-              else setTheme('light');
+              setTheme(theme === 'light' ? 'dark' : 'light');
             }}
           >
-            <Sun className="" />
+            {theme === 'light' ? <Moon fill="black" size={20} /> : <Sun />}
           </Button>
         </NavbarItem>
+        <NavbarContent className="sm:hidden" justify="end">
+          <NavbarMenuToggle />
+        </NavbarContent>
       </NavbarContent>
+      <NavbarMenu>
+        {navItems.map((item) => (
+          <NavbarMenuItem key={item.href}>
+            <Link
+              onClick={() => {
+                setIsActive(item.href);
+                setIsMenuOpen(false);
+              }}
+              className="text-black dark:text-white"
+              color="foreground"
+              href={item.href}
+            >
+              {item.label}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
   );
 }

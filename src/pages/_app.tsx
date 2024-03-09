@@ -1,14 +1,14 @@
 import '@/styles/globals.css';
 import { NextUIProvider } from '@nextui-org/react';
-import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
+import ThemeProvider from './provider';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <NextUIProvider>
-      <NextThemesProvider attribute="class" defaultTheme="dark">
+    <ThemeProvider attribute="class" defaultTheme="system">
+      <NextUIProvider>
         <Component {...pageProps} />
-      </NextThemesProvider>
-    </NextUIProvider>
+      </NextUIProvider>
+    </ThemeProvider>
   );
 }

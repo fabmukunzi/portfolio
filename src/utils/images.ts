@@ -5,6 +5,7 @@ import TypescriptImage from '../assets/Typescript.svg';
 import JavascriptImage from '../assets/Javascript.svg';
 import AntdImage from '../assets/AntDesign.svg';
 import TailwindImage from '../assets/TailwindCss.svg';
+import sincImage from '../assets/Screenshot 2024-02-10 114614.png';
 
 export {
   ReactImage,
@@ -14,4 +15,5 @@ export {
   JavascriptImage,
   AntdImage,
   TailwindImage,
+  sincImage
 };

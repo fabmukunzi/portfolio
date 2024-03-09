@@ -7,7 +7,7 @@ import {
   TailwindImage,
   TypescriptImage,
 } from '@/utils/images';
-import { Image } from '@nextui-org/react';
+import { Button, Image } from '@nextui-org/react';
 import React from 'react';
 
 const ContactComponent = () => {
