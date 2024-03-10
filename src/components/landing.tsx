@@ -56,7 +56,7 @@ const LandingPage = () => {
                 key={index}
                 target="_blank"
                 isIconOnly
-                className="p-2 rounded-full border dark:border-white border-black"
+                className="p-2 dark:hover:scale-110 transition rounded-full border dark:border-white border-black"
                 as={Link}
                 href={link.href}
               >
@@ -67,7 +67,7 @@ const LandingPage = () => {
         </div>
       </div>
       <motion.img
-        className="border p-6 rounded-xl md:rotate-12"
+        className="border p-6 rounded-xl"
         initial={{ rotate: 20 }}
         whileHover={{ rotate: 0 }}
         whileTap={{ rotate: 0 }}

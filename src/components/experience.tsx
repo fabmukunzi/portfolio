@@ -1,17 +1,6 @@
 import { experience } from '@/utils/constants';
-import {
-  AntdImage,
-  GrapgqlImage,
-  JavascriptImage,
-  NextImage,
-  ReactImage,
-  TailwindImage,
-  TypescriptImage,
-} from '@/utils/images';
 import { ExternalLink } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
-// import { Image } from '@nextui-org/react';
 import React from 'react';
 
 const ExperienceComponent = () => {

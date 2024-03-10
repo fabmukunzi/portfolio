@@ -1,34 +1,16 @@
 import { projects } from '@/utils/constants';
-import {
-  AntdImage,
-  GrapgqlImage,
-  JavascriptImage,
-  NextImage,
-  ReactImage,
-  TailwindImage,
-  TypescriptImage,
-  sincImage,
-} from '@/utils/images';
-import {
-  Badge,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Chip,
-  Image,
-  ScrollShadow,
-  image,
-  // Image,
-} from '@nextui-org/react';
+import { Card, CardFooter, Chip, Image, ScrollShadow } from '@nextui-org/react';
 import { GithubLogo } from '@phosphor-icons/react';
-import { ExternalLink, Link as LinkIcon } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 
 const ProjectsComponent = () => {
   return (
-    <div className="flex flex-col items-center w-full dark:bg-[#282828] bg-gray-100" id="projects">
+    <div
+      className="flex flex-col pb-5 items-center w-full dark:bg-[#282828] bg-gray-100"
+      id="projects"
+    >
       <h1 className="py-20 text-left text-4xl font-bold">Projects</h1>
       <p className="md:w-[70%] mx-4 text-center mb-10">
         Below is some of the projects i have worked on.
