@@ -31,7 +31,7 @@ const ProjectsComponent = () => {
               // width={370}
             />
             {/* </CardBody> */}
-            <CardFooter className="flex flex-col">
+            <CardFooter className="flex flex-col pb-2">
               <div className="flex justify-between items-center w-full">
                 <p>{project.name}</p>
                 <div className="flex gap-3">

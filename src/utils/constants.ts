@@ -26,7 +26,7 @@ export const projects = [
   {
     name: 'Sinc | Dashboard',
     imageSrc:
-      'https://res-console.cloudinary.com/dagurahkl/thumbnails/v1/image/upload/v1707558468/U2NyZWVuc2hvdF8yMDI0LTAyLTEwXzExNDYxNF9nZmNlZHc=/grid_landscape',
+      'https://res.cloudinary.com/dagurahkl/image/upload/v1707558468/Screenshot_2024-02-10_114614_gfcedw.png',
     link: 'https://organizer.sinc.today/',
     description: 'Dashboard for Event management platform',
     technologies: [
