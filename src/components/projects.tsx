@@ -19,7 +19,7 @@ const ProjectsComponent = () => {
         {projects.map((project) => (
           <Card
             key={project.link}
-            className="md:w-[18rem] w-[22rem] h-[22rem] border rounded-md p-0"
+            className="md:w-[18rem] border-[#4b4b4b] w-[22rem] h-[22rem] border rounded-md p-0"
           >
             {/* <CardHeader>Sinc Organizer Dashboard</CardHeader> */}
             {/* <CardBody className="overflow-visible py-2"> */}
