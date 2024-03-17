@@ -13,7 +13,7 @@ import React from 'react';
 const Aboutcomponent = () => {
   return (
     <div
-      className="flex flex-col items-center md:w-full w-[100%] h-[100vh] dark:bg-[#282828] bg-gray-100"
+      className="flex flex-col border-y-2 border-[#595858] items-center md:w-full w-[100%] h-[100vh] dark:bg-[#282828] bg-gray-100"
       id="about"
     >
       <h1 className="text-left text-4xl font-bold py-20">About</h1>
@@ -28,7 +28,7 @@ const Aboutcomponent = () => {
       <div className="flex md:mx-0 mx-6 flex-wrap gap-x-10 gap-y-4 mt-3">
         <Image className="w-20 md:w-32" src={ReactImage} alt="React" />
         <Image className="w-20 md:w-32" src={NextImage} alt="Next.js" />
-        <Image className="w-20 md:w-32" src={GrapgqlImage} alt="GraphQL" />
+        {/* <Image className="w-20 md:w-32" src={GrapgqlImage} alt="GraphQL" /> */}
         <Image
           className="w-20 md:w-32"
           src={TypescriptImage}

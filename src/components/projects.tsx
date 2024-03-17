@@ -8,7 +8,7 @@ import React from 'react';
 const ProjectsComponent = () => {
   return (
     <div
-      className="flex flex-col pb-5 items-center w-full dark:bg-[#282828] bg-gray-100"
+      className="flex border-y-2 border-[#595858] flex-col pb-5 items-center w-full dark:bg-[#282828] bg-gray-100"
       id="projects"
     >
       <h1 className="py-20 text-left text-4xl font-bold">Projects</h1>
@@ -19,7 +19,7 @@ const ProjectsComponent = () => {
         {projects.map((project) => (
           <Card
             key={project.link}
-            className="md:w-[18rem] border-[#4b4b4b] w-[22rem] h-[22rem] border rounded-md p-0"
+            className="md:w-[18rem] border-[#4b4b4b] w-[22rem] h-[22.3rem] border rounded-md p-0"
           >
             {/* <CardHeader>Sinc Organizer Dashboard</CardHeader> */}
             {/* <CardBody className="overflow-visible py-2"> */}

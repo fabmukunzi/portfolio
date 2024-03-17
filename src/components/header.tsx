@@ -15,7 +15,7 @@ import { useTheme } from 'next-themes';
 
 export default function HeaderComponent() {
   const { theme, setTheme } = useTheme();
-  const [isActive, setIsActive] = useState('#about');
+  const [isActive, setIsActive] = useState('');
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const navItems = [
     {
@@ -37,7 +37,12 @@ export default function HeaderComponent() {
   ];
 
   return (
-    <Navbar isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+    <Navbar
+      isBordered
+      className="border-[#595858]"
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarBrand>
         <Link className="font-bold text-inherit" color="foreground" href="#">
           FABMUKUNZI
