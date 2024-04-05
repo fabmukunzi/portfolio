@@ -9,6 +9,7 @@ import {
 } from '@phosphor-icons/react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useMediaQuery } from '@geist-ui/react';
 
 const LandingPage = () => {
   const socialMediaLinks = [
@@ -37,6 +38,7 @@ const LandingPage = () => {
     //   href: 'https://www.facebook.com/',
     // },
   ];
+  const isMobile = useMediaQuery('mobile');
   return (
     <div className="flex md:mx-0 mx-6 -mt-4 h-[100vh] md:flex-row flex-col-reverse justify-around items-center text-lg">
       <div className="text-xl">
@@ -68,7 +70,7 @@ const LandingPage = () => {
       </div>
       <motion.img
         className="border p-6 rounded-xl"
-        initial={{ rotate: 20 }}
+        initial={isMobile ? {rotate: 0} : { rotate: 20 }}
         whileHover={{ rotate: 0 }}
         whileTap={{ rotate: 0 }}
         transition={{ duration: 0.3 }}
