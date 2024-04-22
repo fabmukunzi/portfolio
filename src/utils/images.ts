@@ -7,6 +7,8 @@ import AntdImage from '../assets/AntDesign.svg';
 import TailwindImage from '../assets/TailwindCss.svg';
 import sincImage from '../assets/Screenshot 2024-02-10 114614.png';
 import MapImage from '../assets/map.svg';
+import ReactNative from '../assets/ReactNative.svg';
+import NestJs from '../assets/NestJs.svg';
 
 export {
   ReactImage,
@@ -18,4 +20,6 @@ export {
   TailwindImage,
   sincImage,
   MapImage,
+  ReactNative,
+  NestJs
 };

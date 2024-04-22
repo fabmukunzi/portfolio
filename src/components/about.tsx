@@ -6,6 +6,8 @@ import {
   ReactImage,
   TailwindImage,
   TypescriptImage,
+  ReactNative,
+  NestJs
 } from '@/utils/images';
 import Image from 'next/image';
 import React from 'react';
@@ -27,8 +29,10 @@ const Aboutcomponent = () => {
       </p>
       <div className="flex md:mx-0 mx-6 flex-wrap gap-x-10 gap-y-4 mt-3">
         <Image className="w-20 md:w-32" src={ReactImage} alt="React" />
-        <Image className="w-20 md:w-32" src={NextImage} alt="Next.js" />
+        <Image className="w-20 md:w-32" src={ReactNative} alt="React Native" />
+        <Image className="w-20 md:w-32" src={NextImage} alt="NextJs" />
         {/* <Image className="w-20 md:w-32" src={GrapgqlImage} alt="GraphQL" /> */}
+        {/* <Image className="w-20 md:w-32" src={NestJs} alt="NestJs" /> */}
         <Image
           className="w-20 md:w-32"
           src={TypescriptImage}

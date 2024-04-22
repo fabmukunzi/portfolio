@@ -1,5 +1,16 @@
 export const experience = [
   {
+    company: 'Consumatech',
+    position: 'Full-stack Engineer',
+    duration: 'APR 2024 - PRESENT',
+    responsibilities: [
+      'Create responsive and user-friendly web interfaces using NextJs',
+      'Creating backend APIs using NestJs',
+      'Implement and optimize front-end functionalities for optimal performance',
+    ],
+    url: 'https://consumatech.com/',
+  },
+  {
     company: 'Sinc today',
     position: 'Frontend Engineer',
     duration: 'MAY 2023 - PRESENT',
