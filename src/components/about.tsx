@@ -15,11 +15,11 @@ import React from 'react';
 const Aboutcomponent = () => {
   return (
     <div
-      className="flex flex-col border-y-2 border-[#595858] items-center md:w-full w-[100%] h-[100vh] dark:bg-[#282828] bg-gray-100"
+      className="flex flex-col border-y-2 border-[#595858] items-center md:w-full w-[100%] h-[100vh] dark:bg-[#181818] bg-gray-100"
       id="about"
     >
       <h1 className="text-left text-4xl font-bold py-20">About</h1>
-      <p className="mx-3 text-center">
+      <p className="mx-3 text-center w-[80%]">
         With a passion for software development, I&apos;ve honed my skills over
         3 years, blending creativity with strategic thinking. Specializing in
         Software development, I empower clients to thrive in today&apos;s

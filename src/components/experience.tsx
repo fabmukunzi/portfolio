@@ -1,7 +1,10 @@
 import { experience } from '@/utils/constants';
+import { Avatar } from '@nextui-org/react';
 import { ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
+import logo from '@/assets/logo_primary_rounded.jpg';
+import Image from 'next/image';
 
 const ExperienceComponent = () => {
   return (
@@ -11,17 +14,20 @@ const ExperienceComponent = () => {
         Below is few of my recent relevant technical experience.
       </p>
       {experience.map((exp) => (
-        <div className="text-left md:mx-0 mx-6 md:w-[70%]" key={exp.url}>
+        <div className="text-left md:mx-0 my-4 mx-6 md:w-[70%]" key={exp.url}>
           <Link
             target="blank"
             href={exp.url}
-            className="flex gap-4 font-bold md:text-xl"
+            className="flex items-center gap-4 font-bold md:text-xl"
           >
-            {exp.company} <ExternalLink />
+            {/* <Image alt="logo" className="rounded-lg" width={50} src={logo} /> */}
+            {exp.company} <ExternalLink size={20} />
           </Link>
-          <p className="text-secondary text-base my-2">@{exp.position}</p>
+          <p className="text-white/80 text-base my-2">
+            {exp.position} -<span className="">[{exp.location}]</span>
+          </p>
           <p className="text-secondary text-xs">{exp.duration}</p>
-          <div className="flex flex-col my-4 text-secondary">
+          <div className="flex flex-col my-3 text-secondary">
             {exp.responsibilities.map((resp) => (
               <p key={resp}>- {resp}</p>
             ))}
