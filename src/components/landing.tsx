@@ -69,12 +69,12 @@ const LandingPage = () => {
         </div>
       </div>
       <motion.img
-        className="border p-6 rounded-xl"
-        initial={isMobile ? {rotate: 0} : { rotate: 20 }}
-        whileHover={{ rotate: 0 }}
+        className="border p-6 rounded-xl hover:cursor-pointer"
+        initial={isMobile ? { rotate: 0 } : { rotate: 20 }}
+        whileHover={!isMobile ? { scale: 1.1, translateY: -20,rotate: 0 } : {  }}
         whileTap={{ rotate: 0 }}
         transition={{ duration: 0.3 }}
-        src="https://res.cloudinary.com/dagurahkl/image/upload/v1698509499/xpu6s3rcfvdnvjrvnr61.png "
+        src="https://res.cloudinary.com/dagurahkl/image/upload/v1698509499/xpu6s3rcfvdnvjrvnr61.png"
         width={220}
       />
     </div>

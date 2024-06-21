@@ -1,4 +1,4 @@
-import { projects } from '@/utils/constants';
+import { projects } from '@/utils/data';
 import { Card, CardFooter, Chip, Image, ScrollShadow } from '@nextui-org/react';
 import { GithubLogo } from '@phosphor-icons/react';
 import { ExternalLink, Globe } from 'lucide-react';
@@ -35,11 +35,19 @@ const ProjectsComponent = () => {
               <div className="flex justify-between items-center w-full">
                 <p>{project.name}</p>
                 <div className="flex gap-3">
-                  <Link target="blank" href={project.link} className="bg-[#333333] transition-all duration-500 hover:scale-110 p-2 rounded-full">
+                  <Link
+                    target="blank"
+                    href={project.link}
+                    className="bg-white border border-[#333333] dark:bg-[#333333] transition-all duration-500 hover:scale-110 p-2 rounded-full"
+                  >
                     <Globe size={20} />
                   </Link>
                   {project?.github && (
-                    <Link target="blank" href={project?.github} className="bg-[#333333] transition-all duration-500 hover:scale-110 p-2 rounded-full">
+                    <Link
+                      target="blank"
+                      href={project?.github}
+                      className="bg-white border border-[#333333] dark:bg-[#333333] transition-all duration-500 hover:scale-110 p-2 rounded-full"
+                    >
                       <GithubLogo size={20} />
                     </Link>
                   )}
@@ -55,7 +63,7 @@ const ProjectsComponent = () => {
                 {project.technologies.map((teck) => (
                   <Chip
                     key={teck}
-                    className="rounded-full border-none text-xs bg-[#333333]"
+                    className="rounded-full text-xs bg-white border border-[#333333] dark:bg-[#333333]"
                   >
                     {teck}
                   </Chip>

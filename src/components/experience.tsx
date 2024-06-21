@@ -1,4 +1,4 @@
-import { experience } from '@/utils/constants';
+import { experience } from '@/utils/data';
 import { Avatar } from '@nextui-org/react';
 import { ExternalLink } from 'lucide-react';
 import Link from 'next/link';
@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const ExperienceComponent = () => {
   return (
-    <div className="flex flex-col items-center" id="experience">
+    <div className="flex flex-col pb-20 items-center" id="experience">
       <h1 className="py-20 text-left text-4xl font-bold">Experince</h1>
       <p className="md:w-1/2 mb-5 text-center">
         Below is few of my recent relevant technical experience.

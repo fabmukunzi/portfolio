@@ -2,12 +2,13 @@ export const experience = [
   {
     company: 'Consumatech',
     position: 'Full-stack Engineer',
-    duration: 'APR 2024 - PRESENT',
+    duration: 'MAR 2024 - JUN 2024',
     location: 'Pretoria, South Africa - Remote',
     responsibilities: [
-      'Create responsive and user-friendly web interfaces using NextJs',
-      'Creating backend APIs using NestJs',
-      'Writen unit and integration tests for NextJs Apps using Jest',
+      'Written unit tests to ensure seamless and reliable functionality of the frontend, enhancing overall application stability',
+      'Ensured uniform code standards across various website templates, enhancing maintainability',
+      'Resolved backend issues and bugs, significantly enhancing user experience by improving system reliability and performance',
+      'Optimized frontend performance for superior user interaction'
     ],
     url: 'https://consumatech.com/',
   },
@@ -17,9 +18,9 @@ export const experience = [
     duration: 'MAY 2023 - PRESENT',
     location: 'Kigali, Rwanda - Remote',
     responsibilities: [
-      'Create responsive and user-friendly web interfaces using NextJs',
-      'Collaborate with cross-functional teams to gather requirements and design solutions',
-      'Implement and optimize front-end functionalities for optimal performance',
+      'Collaborated with a team of professionals to develop modern day software that largely improved my overall technical skills',
+      'Collaborated on developing a user-friendly organizer dashboard for effective event management.',
+      'Collaborated on developing an event explore page enabling users to discover events and make reservations',
     ],
     url: 'https://sinc.today/',
   },

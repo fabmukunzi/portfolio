@@ -67,7 +67,7 @@ export default function HeaderComponent() {
             rel="noopener noreferrer"
             as={Link}
             className="font-semibold rounded-lg dark:bg-white dark:text-black md:mx-6 bg-black px-4 h-11 text-white"
-            href="../assets/resume.pdf"
+            href="../assets/resume3.pdf"
             variant="solid"
           >
             Resume
