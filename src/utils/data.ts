@@ -48,7 +48,7 @@ export const projects = [
     description: "Creative Aminu's Portfolio Website",
     technologies: [
       'NextJs',
-      'Tailwind',
+      'Tailwind Css',
       // 'Antd',
       'Framer motion',
       // 'Redux Toolkit',
@@ -57,15 +57,15 @@ export const projects = [
   {
     name: 'Sinc | Dashboard',
     imageSrc:
-      'https://res.cloudinary.com/dagurahkl/image/upload/v1707558468/Screenshot_2024-02-10_114614_gfcedw.png',
+      'https://res.cloudinary.com/dagurahkl/image/upload/v1719442942/Screenshot_2024-06-27_010050_xc1gey.png',
     link: 'https://organizer.sinc.today/',
     description: 'Dashboard for Event management platform',
     technologies: [
       'NextJs',
       'Tailwind',
-      // 'Antd',
-      'Framer motion',
-      // 'Redux Toolkit',
+      // 'Ant Design',
+      // 'Framer motion',
+      'Redux Toolkit',
     ],
   },
   {
@@ -86,7 +86,7 @@ export const projects = [
   {
     name: 'Portfolio',
     imageSrc:
-      'https://res.cloudinary.com/dagurahkl/image/upload/v1709981801/Screenshot_2024-03-09_125455_aqppg0.png',
+      'https://res.cloudinary.com/dagurahkl/image/upload/v1719443240/Screenshot_2024-06-27_010700_azfqkg.png',
     link: 'https://fabrand.vercel.app/',
     description: 'My personal website portfolio it is public',
     github: 'https://github.com/fabmukunzi/portfolio',

@@ -14,19 +14,43 @@ import { useMediaQuery } from '@geist-ui/react';
 const LandingPage = () => {
   const socialMediaLinks = [
     {
-      icon: <LinkedinLogo size={20} />,
+      icon: (
+        <LinkedinLogo
+          weight="fill"
+          className="group-hover:scale-125 transition-all duration-500"
+          size={25}
+        />
+      ),
       href: 'https://www.linkedin.com/in/mukunzi-fabrice/',
     },
     {
-      icon: <GithubLogo size={20} />,
+      icon: (
+        <GithubLogo
+          weight="fill"
+          className="group-hover:scale-125 transition-all duration-500"
+          size={25}
+        />
+      ),
       href: 'https://github.com/fabmukunzi',
     },
     {
-      icon: <InstagramLogo size={20} />,
+      icon: (
+        <InstagramLogo
+          weight="fill"
+          className="group-hover:scale-125 transition-all duration-500"
+          size={25}
+        />
+      ),
       href: 'https://www.instagram.com/fab_mukunzi/',
     },
     {
-      icon: <WhatsappLogo size={20} />,
+      icon: (
+        <WhatsappLogo
+          weight="fill"
+          className="group-hover:scale-125 transition-all duration-500"
+          size={25}
+        />
+      ),
       href: 'https://api.whatsapp.com/send?phone=250798221541',
     },
     // {
@@ -40,7 +64,7 @@ const LandingPage = () => {
   ];
   const isMobile = useMediaQuery('mobile');
   return (
-    <div className="flex md:mx-0 mx-6 -mt-4 h-[100vh] md:flex-row flex-col-reverse justify-around items-center text-lg">
+    <div className="flex md:mx-0 mx-6 md:-mt-16 h-[100vh] md:flex-row flex-col-reverse justify-around items-center text-lg">
       <div className="text-xl">
         <p className="text-2xl font-semibold">I am Fabrice Mukunzi</p>
         <p className="md:text-4xl text-3xl font-bold my-1">
@@ -51,14 +75,14 @@ const LandingPage = () => {
           <br />I thrive on turning ideas into impactful solutions.
         </p>
 
-        <div className="my-5">
+        <div className="my-5 mb-14 md:mb-0">
           <div className="flex gap-2">
             {socialMediaLinks.map((link, index) => (
               <Button
                 key={index}
                 target="_blank"
                 isIconOnly
-                className="p-2 dark:hover:scale-110 transition rounded-full border dark:border-white border-black"
+                className="p-2 w-fit group transition rounded-full border-4 dark:border-white border-black"
                 as={Link}
                 href={link.href}
               >
@@ -69,9 +93,9 @@ const LandingPage = () => {
         </div>
       </div>
       <motion.img
-        className="border p-6 rounded-xl hover:cursor-pointer"
+        className="border-4 p-6 rounded-xl hover:cursor-pointer"
         initial={isMobile ? { rotate: 0 } : { rotate: 20 }}
-        whileHover={!isMobile ? { scale: 1.1, translateY: -20,rotate: 0 } : {  }}
+        whileHover={!isMobile ? { scale: 1.1, translateY: -20, rotate: 0 } : {}}
         whileTap={{ rotate: 0 }}
         transition={{ duration: 0.3 }}
         src="https://res.cloudinary.com/dagurahkl/image/upload/v1698509499/xpu6s3rcfvdnvjrvnr61.png"

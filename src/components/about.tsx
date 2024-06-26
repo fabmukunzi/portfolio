@@ -19,7 +19,7 @@ const Aboutcomponent = () => {
       id="about"
     >
       <h1 className="text-left text-4xl font-bold py-20">About</h1>
-      <p className="mx-3 text-center w-[80%]">
+      <p className="mx-3 text-center md:w-[80%]">
         With a passion for software development, I&apos;ve honed my skills over
         3 years, blending creativity with strategic thinking. Specializing in
         Software development, I empower clients to thrive in today&apos;s

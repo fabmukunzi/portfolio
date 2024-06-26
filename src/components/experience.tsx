@@ -9,7 +9,7 @@ import Image from 'next/image';
 const ExperienceComponent = () => {
   return (
     <div className="flex flex-col pb-20 items-center" id="experience">
-      <h1 className="py-20 text-left text-4xl font-bold">Experince</h1>
+      <h1 className="py-20 text-left text-4xl font-bold">Experience</h1>
       <p className="md:w-1/2 mb-5 text-center">
         Below is few of my recent relevant technical experience.
       </p>
