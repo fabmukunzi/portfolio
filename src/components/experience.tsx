@@ -18,12 +18,14 @@ const ExperienceComponent = () => {
           <Link
             target="blank"
             href={exp.url}
-            className="flex items-center gap-4 font-bold md:text-xl"
+            className="flex items-center gap-2 font-semibold md:text-xl"
           >
-            {/* <Image alt="logo" className="rounded-lg" width={50} src={logo} /> */}
-            {exp.company} <ExternalLink size={20} />
+            {/*bg-[#181818] p-2*/}
+            <Image alt="logo" className="rounded-lg object-contain w-10 h-10" src={exp.logo} />
+            {exp.company} 
+            <ExternalLink size={20} />
           </Link>
-          <p className="text-white/80 text-base my-2">
+          <p className="text-white/80 font-medium text-base my-2">
             {exp.position} -<span className="">[{exp.location}]</span>
           </p>
           <p className="text-secondary text-xs">{exp.duration}</p>

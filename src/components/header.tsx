@@ -9,6 +9,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
+  Tooltip,
 } from '@nextui-org/react';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
@@ -67,23 +68,26 @@ export default function HeaderComponent() {
             rel="noopener noreferrer"
             as={Link}
             className="font-semibold rounded-lg dark:bg-white dark:text-black md:mx-6 bg-black px-4 h-11 text-white"
-            href="../assets/resume3.pdf"
+            href="../assets/resume4.pdf"
             variant="solid"
           >
             Resume
           </Button>
         </NavbarItem>
-        <NavbarItem>
-          <Button
-            className="font-semibold rounded-full dark:bg-white dark:text-black bg-black p-2 text-white"
-            isIconOnly
-            onClick={() => {
-              setTheme(theme === 'light' ? 'dark' : 'light');
-            }}
-          >
-            {theme === 'light' ? <Moon fill="black" size={20} /> : <Sun />}
-          </Button>
-        </NavbarItem>
+        <Tooltip content="Coming soon" placement="bottom" color='success'>
+          <NavbarItem>
+            <Button
+              className="font-semibold rounded-full dark:bg-white dark:text-black bg-black p-2 text-white"
+              isIconOnly
+              isDisabled
+              onClick={() => {
+                setTheme(theme === 'light' ? 'dark' : 'light');
+              }}
+            >
+              {theme === 'light' ? <Moon fill="black" size={20} /> : <Sun />}
+            </Button>
+          </NavbarItem>
+        </Tooltip>
         <NavbarContent className="sm:hidden" justify="end">
           <NavbarMenuToggle />
         </NavbarContent>
