@@ -1,23 +1,9 @@
-import React, { useState } from 'react';
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  Link,
-  Button,
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle,
-  Tooltip,
-} from '@nextui-org/react';
-import { Moon, Sun } from 'lucide-react';
-import { useTheme } from 'next-themes';
+import React from "react";
+import { Navbar, NavbarBrand, NavbarMenuToggle, Image, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem, Link, Button } from "@nextui-org/react";
 
-export default function HeaderComponent() {
-  const { theme, setTheme } = useTheme();
-  const [isActive, setIsActive] = useState('');
+export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
   const navItems = [
     {
       label: 'About',
@@ -39,22 +25,29 @@ export default function HeaderComponent() {
 
   return (
     <Navbar
-      isBordered
-      className="border-[#595858]"
+      className="w-[70%]  mx-auto fixed rounded-xl mt-10 border-border_color border-2 backdrop-blur-md"
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
+    // shouldHideOnScroll
     >
-      <NavbarBrand>
-        <Link className="font-bold text-inherit" color="foreground" href="#">
-          FABMUKUNZI
-        </Link>
-      </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-10" justify="center">
-        {navItems.map((item) => (
-          <NavbarItem key={item.href} isActive={isActive === item.href}>
+      <NavbarContent className="sm:hidden" justify="start">
+        <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
+      </NavbarContent>
+
+      <NavbarContent className="pr-3" justify="start">
+        <NavbarBrand>
+          <Link className="font-bold text-inherit" color="foreground" href="#">
+            <Image alt="Logo" className='w-8 h-8 rounded-full object-cover mr-2 grayscale' src='https://res.cloudinary.com/dagurahkl/image/upload/v1732890583/DSC_6249_2_xyiacb.jpg' />
+            FABMUKUNZI
+          </Link>
+        </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex gap-12" justify="center">
+        {navItems.map((item, index) => (
+          <NavbarItem key={`${item}-${index}`}>
             <Link
-              onClick={() => setIsActive(item.href)}
-              color="foreground"
+              className="w-full text-white"
               href={item.href}
             >
               {item.label}
@@ -62,46 +55,25 @@ export default function HeaderComponent() {
           </NavbarItem>
         ))}
       </NavbarContent>
+
       <NavbarContent justify="end">
         <NavbarItem>
           <Button
-            rel="noopener noreferrer"
             as={Link}
-            className="font-semibold rounded-lg dark:bg-white dark:text-black md:mx-6 bg-black px-4 h-11 text-white"
+            className="font-semibold rounded-lg dark:bg-white dark:text-black bg-black h-10 text-white"
             href="../assets/resume4.pdf"
             variant="solid"
           >
             Resume
           </Button>
         </NavbarItem>
-        <Tooltip content="Coming soon" placement="bottom" color='success'>
-          <NavbarItem>
-            <Button
-              className="font-semibold rounded-full dark:bg-white dark:text-black bg-black p-2 text-white"
-              isIconOnly
-              isDisabled
-              onClick={() => {
-                setTheme(theme === 'light' ? 'dark' : 'light');
-              }}
-            >
-              {theme === 'light' ? <Moon fill="black" size={20} /> : <Sun />}
-            </Button>
-          </NavbarItem>
-        </Tooltip>
-        <NavbarContent className="sm:hidden" justify="end">
-          <NavbarMenuToggle />
-        </NavbarContent>
       </NavbarContent>
+
       <NavbarMenu>
-        {navItems.map((item) => (
-          <NavbarMenuItem key={item.href}>
+        {navItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              onClick={() => {
-                setIsActive(item.href);
-                setIsMenuOpen(false);
-              }}
-              className="text-black dark:text-white"
-              color="foreground"
+              className="w-full"
               href={item.href}
             >
               {item.label}

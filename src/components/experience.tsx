@@ -1,6 +1,6 @@
 import { experience } from '@/utils/data';
 import { Avatar } from '@nextui-org/react';
-import { ExternalLink } from 'lucide-react';
+import { CheckCircle, CircleCheck, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 import logo from '@/assets/logo_primary_rounded.jpg';
@@ -31,7 +31,7 @@ const ExperienceComponent = () => {
           <p className="text-secondary text-xs">{exp.duration}</p>
           <div className="flex flex-col my-3 text-secondary">
             {exp.responsibilities.map((resp) => (
-              <p key={resp}>- {resp}</p>
+              <p key={resp} className='flex gap-2 items-center my-1'><CircleCheck size={17} /> {resp}</p>
             ))}
           </div>
         </div>

@@ -15,7 +15,7 @@ import React from 'react';
 const Aboutcomponent = () => {
   return (
     <div
-      className="flex flex-col border-y-2 border-[#595858] items-center md:w-full w-[100%] h-[100vh] dark:bg-[#181818] bg-gray-100"
+      className="flex flex-col border-y-2 border-border_color items-center md:w-full w-[100%] h-[100vh] dark:bg-dark_bg_color bg-gray-100"
       id="about"
     >
       <h1 className="text-left text-4xl font-bold py-20">About</h1>

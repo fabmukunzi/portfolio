@@ -10,6 +10,7 @@ import {
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useMediaQuery } from '@geist-ui/react';
+import { BackgroundLines } from './ui/background-lines';
 
 const LandingPage = () => {
   const socialMediaLinks = [
@@ -64,44 +65,13 @@ const LandingPage = () => {
   ];
   const isMobile = useMediaQuery('mobile');
   return (
-    <div className="flex md:mx-0 mx-6 md:-mt-16 h-[100vh] md:flex-row flex-col-reverse justify-around items-center text-lg">
-      <div className="text-xl">
-        <p className="text-2xl font-semibold">I am Fabrice Mukunzi</p>
-        <p className="md:text-4xl text-3xl font-bold my-1">
-          Full-stack Developer
-        </p>
-        <p className="text-lg text-secondary">
-          Experienced Fullstack developer based in Kigali,Rwanda
-          <br />I thrive on turning ideas into impactful solutions.
-        </p>
+    <BackgroundLines className="flex items-center grayscale justify-center w-full flex-col px-4 h-screen mt-12">
+      <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-3xl lg:text-5xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
+        Hello 👋🏿, I&apos;m Fabrice Mukunzi<br />and I&apos;m a Software Engineer
+      </h2>
 
-        <div className="my-5 mb-14 md:mb-0">
-          <div className="flex gap-2">
-            {socialMediaLinks.map((link, index) => (
-              <Button
-                key={index}
-                target="_blank"
-                isIconOnly
-                className="p-2 w-fit group transition rounded-full border-4 dark:border-white border-black"
-                as={Link}
-                href={link.href}
-              >
-                {link.icon}
-              </Button>
-            ))}
-          </div>
-        </div>
-      </div>
-      <motion.img
-        className="border-4 p-6 rounded-xl hover:cursor-pointer"
-        initial={isMobile ? { rotate: 0 } : { rotate: 20 }}
-        whileHover={!isMobile ? { scale: 1.1, translateY: -20, rotate: 0 } : {}}
-        whileTap={{ rotate: 0 }}
-        transition={{ duration: 0.3 }}
-        src="https://res.cloudinary.com/dagurahkl/image/upload/v1698509499/xpu6s3rcfvdnvjrvnr61.png"
-        width={220}
-      />
-    </div>
+      <Image alt='My Picture' className='w-[30rem] h-[20rem] rounded-xl object-cover' src='https://res.cloudinary.com/dagurahkl/image/upload/v1732890583/DSC_6249_2_xyiacb.jpg' />
+    </BackgroundLines>
   );
 };
 export default LandingPage;

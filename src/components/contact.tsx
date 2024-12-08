@@ -3,12 +3,12 @@ import { Button } from '@nextui-org/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { WorldMap } from './ui/world-map';
 
 const ContactComponent = () => {
   return (
     <div className="md:h-[120vh] py-20 flex flex-col items-center" id="contact">
       <h1 className=" text-left text-2xl font-bold">GET IN TOUCH</h1>
-
       <div className="flex flex-col items-center">
         <p className="md:w-[70%] my-10 mx-4 text-center">
           You can reach out to me anytime by clicking on bottom right corner
@@ -29,6 +29,18 @@ const ContactComponent = () => {
         src={MapImage}
         className="md:w-[60%] my-10 invert dark:invert-0 object-cover"
       />
+      {/* <WorldMap dots={[{
+        start: { lat: -30.5595, lng: 22.9375, label: "South Africa" },
+        end: { lat: 47.5162, lng: 14.5501, label: "Austria" },
+      },
+      {
+        start: { lat: -1.9403, lng: 29.8739, label: "Rwanda" },
+        end: { lat: -30.5595, lng: 22.9375, label: "South Africa" },
+      },
+      {
+        start: { lat: 47.5162, lng: 14.5501, label: "Austria" },
+        end: { lat: -1.9403, lng: 29.8739, label: "Rwanda" },
+      }]} /> */}
       <p className="text-secondary relative my-4">
         &copy; {new Date().getFullYear()} All Right Reserved
       </p>
