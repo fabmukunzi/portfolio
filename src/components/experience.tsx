@@ -3,7 +3,6 @@ import { Avatar } from '@nextui-org/react';
 import { CheckCircle, CircleCheck, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
-import logo from '@/assets/logo_primary_rounded.jpg';
 import Image from 'next/image';
 
 const ExperienceComponent = () => {
@@ -18,20 +17,33 @@ const ExperienceComponent = () => {
           <Link
             target="blank"
             href={exp.url}
-            className="flex items-center gap-2 font-semibold md:text-xl"
+            className="flex items-center gap-2 font-semibold md:text-lg"
           >
             {/*bg-[#181818] p-2*/}
-            <Image alt="logo" className="rounded-lg object-contain w-10 h-10" src={exp.logo} />
-            {exp.company} 
-            <ExternalLink size={20} />
+            <Image
+              alt="logo"
+              className="rounded-lg object-contain w-10 h-10"
+              src={exp.logo}
+            />
+            <div className="my-2">
+              <div className="flex gap-2">
+                {exp.company}
+                <ExternalLink size={20} />
+              </div>
+              <p className="text-sm font-normal">{exp.position}</p>
+            </div>
           </Link>
-          <p className="text-white/80 font-medium text-base my-2">
-            {exp.position} -<span className="">[{exp.location}]</span>
+          {/* <p className="text-white/80 text-sm font-semibold mb-4 ml-12">
+            {exp.position} - <span className="">[{exp.location}]</span>
+          </p> */}
+          <p className="text-secondary text-xs">
+            <span className="">{exp.location}</span>[{exp.duration}]
           </p>
-          <p className="text-secondary text-xs">{exp.duration}</p>
           <div className="flex flex-col my-3 text-secondary">
             {exp.responsibilities.map((resp) => (
-              <p key={resp} className='flex gap-2 items-center my-1'><CircleCheck size={17} /> {resp}</p>
+              <p key={resp} className="flex gap-2 my-1 text-sm">
+                <CircleCheck className="text-green-200" size={17} /> {resp}
+              </p>
             ))}
           </div>
         </div>

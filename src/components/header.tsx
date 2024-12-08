@@ -61,7 +61,7 @@ export default function App() {
           <Button
             as={Link}
             className="font-semibold rounded-lg dark:bg-white dark:text-black bg-black h-10 text-white"
-            href="../assets/resume4.pdf"
+            href="../assets/resume5.pdf"
             variant="solid"
           >
             Resume

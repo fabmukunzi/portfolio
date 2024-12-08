@@ -6,18 +6,18 @@ import HeaderComponent from '@/components/header';
 import LandingPage from '@/components/landing';
 import ProjectsComponent from '@/components/projects';
 import ParallaxComponent from '@/components/pallarax';
-import { Poppins } from 'next/font/google'
-import { FloatingNav } from '@/components/ui/floating-navbar';
+import { Vazirmatn } from 'next/font/google'
 
-const inter = Poppins({
+const inter = Vazirmatn({
   subsets: ['latin'],
   display: 'swap',
   weight:['200','400','600']
 })
 const App: React.FC = () => {
+  // ScrollReveal().reveal('.headline')
 
   return (
-    <div className={`${inter.className} dark:bg-black dark:text-white bg-white text-black`}>
+    <div className={`${inter.className} dark:bg-black dark:text-white bg-white text-black headline`}>
       {/* <FloatingNav /> */}
       <HeaderComponent />
       {/* <ParallaxComponent offset={100}> */}
