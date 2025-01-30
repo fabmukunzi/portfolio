@@ -9,7 +9,7 @@ const ExperienceComponent = () => {
   return (
     <div className="flex flex-col pb-20 items-center" id="experience">
       <h1 className="py-20 text-left text-4xl font-bold">Experience</h1>
-      <p className="md:w-1/2 mb-5 text-center">
+      <p className="md:w-1/2 mb-5 text-center text-neutral-200">
         Below is few of my recent relevant technical experience.
       </p>
       {experience.map((exp) => (
@@ -36,13 +36,13 @@ const ExperienceComponent = () => {
           {/* <p className="text-white/80 text-sm font-semibold mb-4 ml-12">
             {exp.position} - <span className="">[{exp.location}]</span>
           </p> */}
-          <p className="text-secondary text-xs">
-            <span className="">{exp.location}</span>[{exp.duration}]
+          <p className="text-secondary text-xs md:text-sm">
+            <span className="">{exp.location}</span> [{exp.duration}]
           </p>
           <div className="flex flex-col my-3 text-secondary">
             {exp.responsibilities.map((resp) => (
-              <p key={resp} className="flex gap-2 my-1 text-sm">
-                <CircleCheck className="text-green-200" size={17} /> {resp}
+              <p key={resp} className="flex gap-2 my-1 text-sm lg:text-base">
+                <CircleCheck className="text-white flex-shrink-0" size={17} /> {resp}
               </p>
             ))}
           </div>

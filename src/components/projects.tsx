@@ -13,7 +13,7 @@ const ProjectsComponent = () => {
       id="projects"
     >
       <h1 className="py-20 text-left text-4xl font-bold">Projects</h1>
-      <p className="md:w-[70%] mx-4 text-center mb-10">
+      <p className="md:w-[70%] mx-4 text-center mb-10 text-neutral-200">
         Below is some of the projects i have worked on.
       </p>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-5 gap-y-20 pb-10">

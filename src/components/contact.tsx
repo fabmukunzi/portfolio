@@ -7,7 +7,7 @@ import { WorldMap } from './ui/world-map';
 
 const ContactComponent = () => {
   return (
-    <div className="md:h-[120vh] py-20 flex flex-col items-center" id="contact">
+    <div className="lg:h-[120vh] py-20 flex flex-col items-center" id="contact">
       <h1 className=" text-left text-2xl font-bold">GET IN TOUCH</h1>
       <div className="flex flex-col items-center">
         <p className="md:w-[70%] my-10 mx-4 text-center">

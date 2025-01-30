@@ -4,11 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5269624374813331"
-          crossOrigin="anonymous"
-        ></script>
+      <link rel="shortcut icon" href="/favicon.png" />
       </Head>
       <body>
         <Main />
