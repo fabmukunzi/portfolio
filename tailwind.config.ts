@@ -17,10 +17,12 @@ const config: Config = {
       colors: {
         secondary: '#a1a1a1',
         secondary_dark: '#282828',
+        border_color: '#3f3f4699',
+        dark_bg_color: '#0c0c0c'
       },
     },
   },
   darkMode: 'class',
-  plugins: [],
+  plugins: [nextui()],
 };
 export default config;

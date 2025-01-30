@@ -15,7 +15,6 @@ const ParallaxComponent: React.FC<ParallaxComponentProps> = ({ children, offset 
   const y = useTransform(scrollYProgress, [0, 1], [0, offset]);
 
   useEffect(() => {
-    console.log(scrollYProgress.get()); // To check the scroll progress value
   }, [scrollYProgress]);
 
   return (

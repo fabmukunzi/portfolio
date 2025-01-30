@@ -1,107 +1,33 @@
-import { Button, Image } from '@nextui-org/react';
-import {
-  FacebookLogo,
-  GithubLogo,
-  InstagramLogo,
-  LinkedinLogo,
-  TwitterLogo,
-  WhatsappLogo,
-} from '@phosphor-icons/react';
+import { Image } from '@nextui-org/react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { useMediaQuery } from '@geist-ui/react';
+import { BackgroundLines } from '@/components/ui/background-lines';
 
 const LandingPage = () => {
-  const socialMediaLinks = [
-    {
-      icon: (
-        <LinkedinLogo
-          weight="fill"
-          className="group-hover:scale-125 transition-all duration-500"
-          size={25}
-        />
-      ),
-      href: 'https://www.linkedin.com/in/mukunzi-fabrice/',
-    },
-    {
-      icon: (
-        <GithubLogo
-          weight="fill"
-          className="group-hover:scale-125 transition-all duration-500"
-          size={25}
-        />
-      ),
-      href: 'https://github.com/fabmukunzi',
-    },
-    {
-      icon: (
-        <InstagramLogo
-          weight="fill"
-          className="group-hover:scale-125 transition-all duration-500"
-          size={25}
-        />
-      ),
-      href: 'https://www.instagram.com/fab_mukunzi/',
-    },
-    {
-      icon: (
-        <WhatsappLogo
-          weight="fill"
-          className="group-hover:scale-125 transition-all duration-500"
-          size={25}
-        />
-      ),
-      href: 'https://api.whatsapp.com/send?phone=250798221541',
-    },
-    // {
-    //   icon: <TwitterLogo size={20} />,
-    //   href: 'https://twitter.com/',
-    // },
-    // {
-    //   icon: <FacebookLogo size={20} />,
-    //   href: 'https://www.facebook.com/',
-    // },
-  ];
   const isMobile = useMediaQuery('mobile');
   return (
-    <div className="flex md:mx-0 mx-6 md:-mt-16 h-[100vh] md:flex-row flex-col-reverse justify-around items-center text-lg">
-      <div className="text-xl">
-        <p className="text-2xl font-semibold">I am Fabrice Mukunzi</p>
-        <p className="md:text-4xl text-3xl font-bold my-1">
-          Full-stack Developer
-        </p>
-        <p className="text-lg text-secondary">
-          Experienced Fullstack developer based in Kigali,Rwanda
-          <br />I thrive on turning ideas into impactful solutions.
-        </p>
-
-        <div className="my-5 mb-14 md:mb-0">
-          <div className="flex gap-2">
-            {socialMediaLinks.map((link, index) => (
-              <Button
-                key={index}
-                target="_blank"
-                isIconOnly
-                className="p-2 w-fit group transition rounded-full border-4 dark:border-white border-black"
-                as={Link}
-                href={link.href}
-              >
-                {link.icon}
-              </Button>
-            ))}
-          </div>
-        </div>
-      </div>
-      <motion.img
-        className="border-4 p-6 rounded-xl hover:cursor-pointer"
-        initial={isMobile ? { rotate: 0 } : { rotate: 20 }}
-        whileHover={!isMobile ? { scale: 1.1, translateY: -20, rotate: 0 } : {}}
-        whileTap={{ rotate: 0 }}
-        transition={{ duration: 0.3 }}
-        src="https://res.cloudinary.com/dagurahkl/image/upload/v1698509499/xpu6s3rcfvdnvjrvnr61.png"
-        width={220}
-      />
-    </div>
+    <BackgroundLines className="flex items-center grayscale justify-center w-full flex-col px-4 h-screen md:mt-12">
+      <motion.div
+        className="flex items-center grayscale justify-center w-full flex-col gap-10"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 1,
+          ease: 'easeInOut',
+        }}
+      >
+        <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-200 dark:to-neutral-600 text-2xl md:text-3xl lg:text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
+          Hello 👋🏿, I&apos;m Fabrice Mukunzi
+          <br />
+          and I&apos;m a Software Engineer
+        </h2>
+        <Image
+          alt="My Picture"
+          className="w-[30rem] h-[20rem] rounded-xl object-cover"
+          src="https://res.cloudinary.com/dagurahkl/image/upload/v1732890583/DSC_6249_2_xyiacb.jpg"
+        />
+      </motion.div>
+    </BackgroundLines>
   );
 };
 export default LandingPage;

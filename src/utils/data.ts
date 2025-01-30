@@ -1,12 +1,27 @@
 import SincLogo from "@/assets/sinc-logo.png"
 import ConsumatechLogo from "@/assets/consumatech-logo.png"
 import AndelaLogo from "@/assets/andela-logo.png"
+import CodeofAfricaLogo from "@/assets/codeofafrica-logo.png"
 
 export const experience = [
   {
+    company: 'Code of Africa',
+    position: 'Full-stack Engineer',
+    duration: 'OCT 2024 - PRESENT',
+    location: 'Kigali, Rwanda - Onsite',
+    responsibilities: [
+      'Written unit tests to ensure seamless and reliable functionality of the frontend, enhancing overall application stability',
+      'Ensured uniform code standards across various website templates, enhancing maintainability',
+      'Resolved backend issues and bugs, significantly enhancing user experience by improving system reliability and performance',
+      'Optimized frontend performance for superior user interaction',
+    ],
+    url: 'https://www.codeofafrica.com/',
+    logo: CodeofAfricaLogo
+  },
+  {
     company: 'Consumatech',
     position: 'Full-stack Engineer',
-    duration: 'MAR 2024 - PRESENT',
+    duration: 'MAR 2024 - OCT 2024',
     location: 'Pretoria, South Africa - Remote',
     responsibilities: [
       'Written unit tests to ensure seamless and reliable functionality of the frontend, enhancing overall application stability',

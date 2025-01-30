@@ -1,60 +1,82 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from "react";
 import {
   Navbar,
   NavbarBrand,
+  NavbarMenuToggle,
+  Image,
+  NavbarMenuItem,
+  NavbarMenu,
   NavbarContent,
   NavbarItem,
   Link,
   Button,
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle,
-  Tooltip,
-} from '@nextui-org/react';
-import { Moon, Sun } from 'lucide-react';
-import { useTheme } from 'next-themes';
+} from "@nextui-org/react";
+import { Work_Sans } from "next/font/google";
 
-export default function HeaderComponent() {
-  const { theme, setTheme } = useTheme();
-  const [isActive, setIsActive] = useState('');
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+const inter = Work_Sans({ subsets: ["latin"] });
+
+export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
   const navItems = [
-    {
-      label: 'About',
-      href: '#about',
-    },
-    {
-      label: 'Experience',
-      href: '#experience',
-    },
-    {
-      label: 'Projects',
-      href: '#projects',
-    },
-    {
-      label: 'Get in touch',
-      href: '#contact',
-    },
+    { label: "About", href: "#about" },
+    { label: "Experience", href: "#experience" },
+    { label: "Projects", href: "#projects" },
+    { label: "Get in touch", href: "#contact" },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let currentSection = "";
+      navItems.forEach((item) => {
+        const section = document.querySelector(item.href);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            currentSection = item.href;
+          }
+        }
+      });
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <Navbar
-      isBordered
-      className="border-[#595858]"
+      className="lg:w-[70%] w-[95%] mx-auto fixed rounded-xl md:mt-10 mt-2 border-border_color border-2 backdrop-blur-md"
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
-      <NavbarBrand>
-        <Link className="font-bold text-inherit" color="foreground" href="#">
-          FABMUKUNZI
-        </Link>
-      </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-10" justify="center">
-        {navItems.map((item) => (
-          <NavbarItem key={item.href} isActive={isActive === item.href}>
+      <NavbarContent className="sm:hidden" justify="start">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        />
+      </NavbarContent>
+
+      <NavbarContent className="md:pr-3" justify="start">
+        <NavbarBrand>
+          <Link className="font-bold text-inherit" color="foreground" href="#">
+            <Image
+              alt="Logo"
+              className="w-8 h-8 hidden lg:block rounded-lg object-cover mr-2 grayscale"
+              src="https://res.cloudinary.com/dagurahkl/image/upload/v1732890583/DSC_6249_2_xyiacb.jpg"
+            />
+            <span className={`${inter.className} mr-6`}>FABMUKUNZI</span>
+          </Link>
+        </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex gap-12" justify="center">
+        {navItems.map((item, index) => (
+          <NavbarItem key={index}>
             <Link
-              onClick={() => setIsActive(item.href)}
-              color="foreground"
+              className={`my-1 font-medium text-white ${
+                activeSection === item.href ? "font-semibold text-xl transition-all duration-300" : ""
+              } ${inter.className}`}
               href={item.href}
             >
               {item.label}
@@ -62,47 +84,29 @@ export default function HeaderComponent() {
           </NavbarItem>
         ))}
       </NavbarContent>
+
       <NavbarContent justify="end">
         <NavbarItem>
           <Button
-            rel="noopener noreferrer"
             as={Link}
-            className="font-semibold rounded-lg dark:bg-white dark:text-black md:mx-6 bg-black px-4 h-11 text-white"
-            href="../assets/resume4.pdf"
+            className="font-semibold rounded-lg dark:bg-white dark:text-black bg-black h-10 text-white"
+            href="../assets/resume5.pdf"
             variant="solid"
           >
             Resume
           </Button>
         </NavbarItem>
-        <Tooltip content="Coming soon" placement="bottom" color='success'>
-          <NavbarItem>
-            <Button
-              className="font-semibold rounded-full dark:bg-white dark:text-black bg-black p-2 text-white"
-              isIconOnly
-              isDisabled
-              onClick={() => {
-                setTheme(theme === 'light' ? 'dark' : 'light');
-              }}
-            >
-              {theme === 'light' ? <Moon fill="black" size={20} /> : <Sun />}
-            </Button>
-          </NavbarItem>
-        </Tooltip>
-        <NavbarContent className="sm:hidden" justify="end">
-          <NavbarMenuToggle />
-        </NavbarContent>
       </NavbarContent>
-      <NavbarMenu>
-        {navItems.map((item) => (
-          <NavbarMenuItem key={item.href}>
+
+      <NavbarMenu className="pt-10">
+        {navItems.map((item, index) => (
+          <NavbarMenuItem key={index}>
             <Link
-              onClick={() => {
-                setIsActive(item.href);
-                setIsMenuOpen(false);
-              }}
-              className="text-black dark:text-white"
-              color="foreground"
+              className={`my-1 font-medium text-lg text-white ${
+                activeSection === item.href ? "font-semibold text-xl" : ""
+              } ${inter.className}`}
               href={item.href}
+              onClick={() => setIsMenuOpen(false)}
             >
               {item.label}
             </Link>
