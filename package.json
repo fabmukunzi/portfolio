@@ -11,6 +11,7 @@
   "dependencies": {
     "@geist-ui/react": "^2.2.5",
     "@gsap/react": "^2.1.2",
+    "@next/third-parties": "14.0.5-canary.59",
     "@nextui-org/react": "^2.4.8",
     "@phosphor-icons/react": "^2.0.15",
     "clsx": "^2.1.1",

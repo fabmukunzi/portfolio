@@ -3,6 +3,7 @@ import { NextUIProvider } from '@nextui-org/react';
 import type { AppProps } from 'next/app';
 import ThemeProvider from './provider';
 import Head from 'next/head';
+import {GoogleAnalytics} from "@next/third-parties/google"
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -19,6 +20,7 @@ With a keen eye for detail and a dedication to excellence"
       </Head>
       <NextUIProvider>
         <Component {...pageProps} />
+        <GoogleAnalytics gaId="G-R8HG0TSW99" />
       </NextUIProvider>
     </ThemeProvider>
   );
