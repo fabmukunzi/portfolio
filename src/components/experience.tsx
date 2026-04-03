@@ -45,9 +45,9 @@ const ExperienceComponent = () => {
               src={exp.logo}
             />
             <div className="my-2">
-              <div className="flex gap-2">
+              <div className="flex gap-2 items-center">
                 {exp.company}
-                <ExternalLink size={20} />
+                <ExternalLink size={18} />
               </div>
               <p className="text-sm font-normal">{exp.position}</p>
             </div>
