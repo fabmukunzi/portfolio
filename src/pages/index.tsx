@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AboutComponent from "@/components/about";
 import ContactComponent from "@/components/contact";
@@ -21,8 +21,25 @@ const inter = Work_Sans({ subsets: ["latin"] });
 
 const App: React.FC = () => {
   const [showSocials, setShowSocials] = useState(false);
+  const socialsRef = useRef<HTMLDivElement>(null);
 
   const toggleSocials = () => setShowSocials((prev) => !prev);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (socialsRef.current && !socialsRef.current.contains(event.target as Node)) {
+        setShowSocials(false);
+      }
+    };
+
+    if (showSocials) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showSocials]);
 
   const socialMediaLinks = [
     {
@@ -47,7 +64,7 @@ const App: React.FC = () => {
     <div
       className={`${inter.className} dark:bg-black dark:text-white bg-white text-black headline`}
     >
-      <div className="fixed right-10 bottom-10 z-50">
+      <div ref={socialsRef} className="fixed right-10 bottom-10 z-50">
         <Button
           onClick={toggleSocials}
           isIconOnly
