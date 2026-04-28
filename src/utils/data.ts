@@ -10,10 +10,10 @@ export const experience = [
     duration: 'OCT 2024 - PRESENT',
     location: 'Kigali, Rwanda - Onsite',
     responsibilities: [
-      'Written unit tests to ensure seamless and reliable functionality of the frontend, enhancing overall application stability',
-      'Ensured uniform code standards across various website templates, enhancing maintainability',
-      'Resolved backend issues and bugs, significantly enhancing user experience by improving system reliability and performance',
-      'Optimized frontend performance for superior user interaction',
+      'Contributed to a regulatory platform for Austria’s electricity and gas market, enabling comparison of energy offers',
+      'Contributed to an automotive project enabling vehicle part configuration and localized assembly workflows across markets',
+      'Developed scalable applications using Java and React, improving performance and user experience',
+      'Migrated a legacy application from Dojo to React TypeScript, improving maintainability and performance',
     ],
     url: 'https://www.codeofafrica.com/',
     logo: CodeofAfricaLogo
@@ -21,13 +21,12 @@ export const experience = [
   {
     company: 'Consumatech',
     position: 'Full-stack Engineer',
-    duration: 'MAR 2024 - OCT 2024',
+    duration: 'JAN 2024 - OCT 2024',
     location: 'Pretoria, South Africa - Remote',
     responsibilities: [
-      'Written unit tests to ensure seamless and reliable functionality of the frontend, enhancing overall application stability',
-      'Ensured uniform code standards across various website templates, enhancing maintainability',
-      'Resolved backend issues and bugs, significantly enhancing user experience by improving system reliability and performance',
-      'Optimized frontend performance for superior user interaction',
+      'Fixed backend issues and optimized frontend performance, improving overall user experience',
+      'Wrote unit tests to ensure reliable frontend functionality and stability',
+      ' Standardized code across multiple website templates, improving maintainability',
     ],
     url: 'https://consumatech.com/',
     logo: ConsumatechLogo
@@ -35,12 +34,12 @@ export const experience = [
   {
     company: 'Sinc today',
     position: 'Frontend Engineer',
-    duration: 'MAY 2023 - PRESENT',
+    duration: 'MAY 2023 - DEC 2024',
     location: 'Kigali, Rwanda - Remote',
     responsibilities: [
-      'Collaborated with a team of professionals to develop modern day software that largely improved my overall technical skills',
-      'Collaborated on developing a user-friendly organizer dashboard for effective event management.',
-      'Collaborated on developing an event explore page enabling users to discover events and make reservations',
+      'Collaborated on building an event management dashboard for organizers',
+      'Developed an event discovery platform with booking capabilities',
+      'Worked in a team environment to deliver modern, user-friendly applications',
     ],
     url: 'https://sinc.today/',
     logo: SincLogo
@@ -51,12 +50,11 @@ export const experience = [
     duration: 'NOV 2022 - SEPT 2023',
     location: 'Kigali, Rwanda - Remote',
     responsibilities: [
-      'Written unit and integration tests for both Frontend and Backend',
-      'Developed my first full-stack personal portfolio as a web developer',
-      'Participated in weekly team project presentations to technical managers.',
-      'Made research on world-class technologies used in web development',
+      'Built full-stack applications using React, Express, and PostgreSQL',
+      'Wrote unit and integration tests to ensure reliability',
+      'Participated in technical presentations and collaborative team projects',
     ],
-    url: 'https://rwanda.andela.com/',
+    url: 'https://www.andela.com/',
     logo: AndelaLogo
   },
 ];
@@ -66,7 +64,7 @@ export const projects = [
     name: 'CreativeAminu',
     imageSrc:
       'https://res.cloudinary.com/dagurahkl/image/upload/v1717145472/wfstqyp0acfo7babryhb.png',
-    link: 'https://creativeaminu-git-ft-projects-page-kevin-ks-projects-19e8753e.vercel.app/',
+    // link: 'https://creativeaminu-git-ft-projects-page-kevin-ks-projects-19e8753e.vercel.app/',
     description: "Creative Aminu's Portfolio Website",
     technologies: [
       'NextJs',
@@ -94,7 +92,7 @@ export const projects = [
     name: 'Izimart',
     imageSrc:
       'https://res.cloudinary.com/dagurahkl/image/upload/v1709980616/Screenshot_2024-03-07_112352_n4sohl.png',
-    link: 'https://izimart.com/',
+    // link: 'https://izimart.com/',
     description: 'E-commerce platform for seamless shopping',
     technologies: [
       'NextJs',

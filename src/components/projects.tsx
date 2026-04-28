@@ -32,9 +32,9 @@ const ProjectsComponent = () => {
           ease: 'easeInOut',
         }}
       >
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <PinContainer
-            key={project.link}
+            key={index}
             href={project.link}
             title={project.name}
           >
