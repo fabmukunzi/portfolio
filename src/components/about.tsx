@@ -13,7 +13,7 @@ import {
 } from "@/utils/images";
 import Image from "next/image";
 import React from "react";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 
 const Aboutcomponent = () => {
   return (
@@ -30,17 +30,15 @@ const Aboutcomponent = () => {
     >
       <h1 className="text-left text-4xl font-bold py-20">About</h1>
       <p className="mx-3 text-center md:w-[80%] text-neutral-300 grayscale">
-        With a passion for software development, I&apos;ve honed my skills over
-        3 years, blending creativity with strategic thinking. Specializing in
-        Software development, I empower clients to thrive in today&apos;s
-        dynamic landscape.With over three years in the field, I&apos;ve
-        continuously expanded my expertise through various online platforms,
-        shaping me into a dedicated and skilled web professional.
+        Full-Stack Software Engineer with 3+ years of experience building and shipping production applications end-to-end,
+        from requirements to deployment, in an international teams. Solid expertise in TypeScript, Java, and React within
+        modern full-stack stacks, and a proven agile partner collaborating closely with Engineering, QA, and Product teams,
+        committed to continuous learning and improvement.
       </p>
       <p className="my-10 text-2xl font-semibold text-neutral-400">
         Tools and Platforms
       </p>
-      <motion.div className="grid lg:grid-cols-5 grid-cols-4 md:grid-cols-3 md:mx-0 mx-6 flex-wrap md:gap-20 gap-8 items-center 2xl:mt-6"  initial={{ opacity: 0, y: 40 }}
+      <motion.div className="grid lg:grid-cols-5 grid-cols-4 md:grid-cols-3 md:mx-0 mx-6 flex-wrap md:gap-20 gap-8 items-center 2xl:mt-6" initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
           duration: 1,
@@ -51,17 +49,17 @@ const Aboutcomponent = () => {
           src={TypescriptImage}
           alt="TypeScript"
         />
+        <Image className="w-20 md:w-28" src={Java} alt="Java" />
+        <Image className="w-20 md:w-32" src={ReactImage} alt="React" />
         <Image className="w-20 md:w-32" src={NextImage} alt="NextJs" />
         <Image
           className="w-20 md:w-32"
           src={JavascriptImage}
           alt="JavaScript"
         />
-        <Image className="w-20 md:w-28" src={Java} alt="Java" />
-        <Image className="w-20 md:w-32" src={ReactImage} alt="React" />
+        <Image className="w-20 md:w-28" src={Quarkus} alt="Quarkus" />
         <Image className="w-20 md:w-32" src={ReactNative} alt="React Native" />
         <Image className="w-20 md:w-32" src={NestJs} alt="NestJs" />
-        <Image className="w-20 md:w-28" src={Quarkus} alt="Quarkus" />
         <Image className="w-20 md:w-32" src={AntdImage} alt="Ant Design" />
         <Image
           className="w-20 md:w-32"

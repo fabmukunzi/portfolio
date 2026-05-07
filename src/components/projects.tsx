@@ -19,8 +19,8 @@ const ProjectsComponent = () => {
         ease: 'easeInOut',
       }}
     >
-      <h1 className="py-20 text-left text-4xl font-bold">Projects</h1>
-      <p className="md:w-[70%] mx-4 text-center mb-10 text-neutral-200">
+      <h1 className="pt-20 text-left text-4xl font-bold">Projects</h1>
+      <p className="md:w-[70%] mx-4 text-center my-10 text-neutral-200">
         Below is some of the projects i have worked on.
       </p>
       <motion.div

@@ -12,9 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>Fabrice Mukunzi</title>
         <meta
           name="description"
-          content="Experienced Fullstack developer based in Kigali,Rwanda
-I thrive on turning ideas into impactful solutions.
-With a keen eye for detail and a dedication to excellence"
+          content="Full-Stack Software Engineer with 3+ years of experience building and shipping production applications end-to-end, from requirements to deployment, in an international teams. Solid expertise in TypeScript, Java, and React within modern full-stack stacks, and a proven agile partner collaborating closely with Engineering, QA, and Product teams, committed to continuous learning and improvement."
         />
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
