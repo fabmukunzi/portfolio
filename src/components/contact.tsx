@@ -33,11 +33,14 @@ const ContactComponent = () => {
           Send an email
         </Button>
       </div>
-      <Image
-        alt="Map"
-        src={MapImage}
-        className="md:w-[60%] my-10 invert dark:invert-0 object-cover pointer-events-none"
-      />
+      <div className="md:w-[60%] my-10 w-full px-4">
+        <Image
+          alt="Map"
+          src={MapImage}
+          className="invert dark:invert-0 object-cover pointer-events-none"
+          style={{ width: "100%", height: "auto" }}
+        />
+      </div>
       {/* <WorldMap dots={[{
         start: { lat: -30.5595, lng: 22.9375, label: "South Africa" },
         end: { lat: 47.5162, lng: 14.5501, label: "Austria" },

@@ -34,7 +34,8 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-html{
+html {
+  position: relative;
   scroll-behavior: smooth;
 }
 @layer utilities {

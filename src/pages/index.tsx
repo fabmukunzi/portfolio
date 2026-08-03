@@ -66,7 +66,7 @@ const App: React.FC = () => {
     >
       <div ref={socialsRef} className="fixed right-10 bottom-10 z-50">
         <Button
-          onClick={toggleSocials}
+          onPress={toggleSocials}
           isIconOnly
           className="!w-[48px] !h-[48px] border-2 rounded-2xl flex bg-black border-border_color items-center justify-center transition-all text-white"
         >

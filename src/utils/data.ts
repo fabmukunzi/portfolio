@@ -2,13 +2,28 @@ import SincLogo from "@/assets/sinc-logo.png"
 import ConsumatechLogo from "@/assets/consumatech-logo.png"
 import AndelaLogo from "@/assets/andela-logo.png"
 import CodeofAfricaLogo from "@/assets/codeofafrica-logo.png"
+import CraftscaleLogo from "@/assets/craftscale-logo.webp"
 
 export const experience = [
   {
+    company: 'Craftscale',
+    position: 'Software Engineer',
+    duration: 'JULY 2026 - PRESENT',
+    location: 'San Francisco Bay Area, United States - Remote',
+    responsibilities: [
+      // 'Partnered with product owners, QA, and distributed teams to refine requirements, support testing, and ensure high-quality releases across energy and automotive platforms.',
+      // 'Delivered end-to-end features using Java and React on a regulatory platform for Austria’s electricity and gas market, enabling comparison of energy offers.',
+      // 'Delivered end-to-end features using Java and Dojo on an automotive project, enabling vehicle part configuration, model customization, and localized assembly workflows across international markets.',
+      // 'Contributed to migrating a legacy Dojo frontend to ReactTs, improving maintainability, performance, and UI.',
+    ],
+    url: 'https://craftscale.studio/',
+    logo: CraftscaleLogo
+  },
+  {
     company: 'Code of Africa',
-    position: 'Full-stack Engineer',
-    duration: 'JULY 2024 - PRESENT',
-    location: 'Kigali, Rwanda - Onsite',
+    position: 'Software Engineer',
+    duration: 'JULY 2024 - JUNE 2026',
+    location: 'Kigali, Rwanda - Hybrid',
     responsibilities: [
       'Partnered with product owners, QA, and distributed teams to refine requirements, support testing, and ensure high-quality releases across energy and automotive platforms.',
       'Delivered end-to-end features using Java and React on a regulatory platform for Austria’s electricity and gas market, enabling comparison of energy offers.',
