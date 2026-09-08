@@ -11,10 +11,10 @@ export const experience = [
     duration: 'JULY 2026 - PRESENT',
     location: 'San Francisco Bay Area, United States - Remote',
     responsibilities: [
-      // 'Partnered with product owners, QA, and distributed teams to refine requirements, support testing, and ensure high-quality releases across energy and automotive platforms.',
-      // 'Delivered end-to-end features using Java and React on a regulatory platform for Austria’s electricity and gas market, enabling comparison of energy offers.',
-      // 'Delivered end-to-end features using Java and Dojo on an automotive project, enabling vehicle part configuration, model customization, and localized assembly workflows across international markets.',
-      // 'Contributed to migrating a legacy Dojo frontend to ReactTs, improving maintainability, performance, and UI.',
+      'Partnered with product owners, designers, and a distributed engineering team to refine requirements, support testing, and ensure high-quality releases across web and mobile.',
+      'Delivered end-to-end features using TypeScript, React, Express, and PostgreSQL on a B2B SaaS platform for sales and field-marketing teams, enabling contact capture and AI-assisted follow-up at conferences and trade shows.',
+      'Delivered end-to-end features using Flutter and Dart on the same platform’s mobile client, built on a modular MVVM architecture with dependency injection and strongly typed navigation.',
+      'Contributed to subscription and plan management across the stack, from database schema to UI, improving how capabilities are packaged and released to customers.',
     ],
     url: 'https://craftscale.studio/',
     logo: CraftscaleLogo

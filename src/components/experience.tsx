@@ -36,28 +36,28 @@ const ExperienceComponent = () => {
               {/* Card */}
               <div className="bg-white/5 border border-white/10 rounded-xl py-7 px-8 hover:border-white/20 transition-colors">
                 {/* Header row */}
-                <div className="flex items-start justify-between gap-2">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                   <Link
                     target="_blank"
                     href={exp.url}
-                    className="flex items-center gap-3 font-semibold md:text-lg group"
+                    className="flex min-w-0 items-center gap-3 font-semibold md:text-lg group"
                   >
                     <Image
                       alt="logo"
                       className="rounded-lg object-contain w-9 h-9 flex-shrink-0"
                       src={exp.logo}
                     />
-                    <div>
-                      <div className="flex gap-2 items-center group-hover:underline">
+                    <div className="min-w-0">
+                      <div className="flex flex-wrap gap-2 items-center group-hover:underline">
                         {exp.company}
-                        <ExternalLink size={14} />
+                        <ExternalLink size={14} className="flex-shrink-0" />
                       </div>
                       <p className="text-sm font-normal text-neutral-400">{exp.position}</p>
                     </div>
                   </Link>
 
                   {/* Badges */}
-                  <div className="flex flex-col items-end gap-1 flex-shrink-0">
+                  <div className="flex flex-col items-start gap-1 pl-12 sm:items-end sm:pl-0 flex-shrink-0">
                     <span className="text-xs bg-white/5 text-neutral-400 border border-white/10 px-2 py-0.5 rounded-lg whitespace-nowrap">
                       {exp.duration}
                     </span>
